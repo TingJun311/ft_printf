@@ -6,7 +6,7 @@
 /*   By: ctingjun <ctingjun@student.42.kl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 15:32:14 by ctingjun          #+#    #+#             */
-/*   Updated: 2022/11/02 19:45:25 by ctingjun         ###   ########.fr       */
+/*   Updated: 2022/11/11 20:03:21 by ctingjun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,14 +135,14 @@ int	ft_printf(const char *str, ...)
 	return (total_length);
 }
 
-int	main(void)
-{
-	void	*ptr;
-
-	ptr = NULL;
-	int l = ft_printf("%-20.20sb", NULL);
-	printf("\nLength: %d\n", l);
-	l = printf("%-20.20sb", NULL);
-	printf("\nLength: %d", l);
-	return (0);
-}
+//int	main(void)
+//{
+//	void	*ptr;
+//
+//	ptr = "asdads";
+//	int l = ft_printf("%30.x", 1);
+//	printf("\nLength: %d\n", l);
+//	l = printf("%30.x", 1);
+//	printf("\nLength: %d", l);
+//	return (0);
+//}

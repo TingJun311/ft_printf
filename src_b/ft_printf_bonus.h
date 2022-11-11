@@ -6,7 +6,7 @@
 /*   By: ctingjun <ctingjun@student.42.kl>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 15:32:42 by ctingjun          #+#    #+#             */
-/*   Updated: 2022/11/02 18:38:22 by ctingjun         ###   ########.fr       */
+/*   Updated: 2022/11/11 19:46:01 by ctingjun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <stdarg.h>
 # include "../libft/libft.h"
 
-# define HEXUP "0123456789ABCEDF"
+# define HEXUP "0123456789ABCDEF"
 # define HEXDOWN "0123456789abcdef"
 # define CONVERSIONS "cspdiuxX%"
 # define FLAGS "+- .#0"
@@ -34,8 +34,8 @@ typedef struct flags
 	flag	hash;
 	flag	num;
 	flag	zero;
-	flag	front;
-	flag	back;
+	int		front;
+	int		back;
 	char	current_con;
 }	t_format;
 
@@ -67,5 +67,31 @@ int		my_atoi(char *nptr);
 
 void	print_string(t_format f, char *str, int *len, va_list ptr);
 
-void	check_precision(flag *f, flag *b, char *str);
+void	check_precision(int *f, int *b, char *str);
+
+void	print_string_combination_5(char *str, int *len, char *temp);
+
+void	print_string_combination_6(char *str, int *len);
+
+void	print_address(t_format f, char *str, int *len, va_list ptr);
+
+void	count_hex_p(unsigned long long int num, int *len);
+
+void	print_hex_front(int *len);
+
+void	print_integer(t_format f, char *str, int *len, va_list ptr);
+
+void	ft_putnbr_u_i_d(int temp, t_format f, int *len);
+
+void	ft_putnbr_positive(int num, t_format f, int *len);
+
+void	print_integer_combination_5(char *str, int *len, int temp, t_format f);
+
+void	print_u_integer(t_format f, char *str, int *len, va_list ptr);
+
+void	print_hex(t_format f, char *str, int *len, va_list ptr);
+
+void	check_precision_2(int *f, int *b, char *str);
+
+void	print_hex_front_2(int *len);
 #endif
